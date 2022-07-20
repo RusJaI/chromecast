@@ -1,0 +1,31 @@
+<script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+<!-- Toolbar -->
+<div class="toolbar" role="banner" style="background-color:rgb(27, 121, 97);">
+  <span>Menu Viewer</span>
+    <div class="spacer"></div>
+</div>
+
+<div class="content" role="main" style="background-color: rgb(46, 179, 90);">
+
+<div class="row">
+  <div class="col-6">
+    <ng-container *ngFor="let tablestyle of screen_list">
+      <div>
+          <app-screenview [tablestyle]= "tablestyle" [categoryList]="categoryList"></app-screenview>
+      </div>
+  </ng-container>
+  </div>
+
+</div>
+
+  <!-- Links -->
+  <!-- Footer -->
+  <footer style="color:white;font-weight:bold" >
+    &copy; Copyright {{currentYear}}
+  </footer>
+</div>
+
+
+
+
+<router-outlet></router-outlet>
