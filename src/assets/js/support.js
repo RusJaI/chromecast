@@ -1,7 +1,7 @@
 initializeCastApi = function() {
     console.log("Cast init sucesss");
     cast.framework.CastContext.getInstance().setOptions({
-        receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID
+        receiverApplicationId: '57B587C1'
       });
 };
 
@@ -16,7 +16,7 @@ async function castContent(){
     var mediaInfo = new chrome.cast.media.MediaInfo("https://canadisplay.com/assets/screens/android008.png", "image/PNG");
     var request = new chrome.cast.media.LoadRequest(mediaInfo);
 
-    console.log("cast session : ",castSession);
+    console.log("cast session : ",cast.framework.CastContext.getInstance());
 
     castSession.loadMedia(request).then(
     function() { console.log('Load succeed'); },
